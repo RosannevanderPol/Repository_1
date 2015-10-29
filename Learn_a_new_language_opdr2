@@ -31,6 +31,39 @@ if (age > 60)
 }
 
 4
+ls.commentAboutAge();
+wp.commentAboutAge();
+
+5
+public void growOlder()
+{
+    age = age + 1;
+}
+
+6
+public void giveKnighthood()
+{
+    name = "Sir" + name;
+}
+
+in main: wp.giveKnighthood();
+
+7
+System.out.println("Luke Skywalker's age is " + ls.age);
+
+8
+
+9
+public void growOlderBy(int years)
+{
+    age = age + years;
+}
+
+in main: ls.growOlderBy(10);
+
+
+
+
 
 
 
