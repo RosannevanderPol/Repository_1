@@ -1,0 +1,60 @@
+Opdracht 1
+a
+Person.h
+struct Person
+{
+  char* name;
+  int age;
+};
+
+typedef char *String;
+typedef struct Person *PersonPtr;
+
+void talk(PersonPtr p);
+void commentAboutAge(PersonPtr p);
+PersonPtr make_person(String theName, int theAge);
+
+b
+Person.c
+
+#include <stdio.h>
+#inlcude "Person.h"
+
+void talk(PersonPtr p)
+{
+  printf("Hi, my name's %s\n", p->name);
+  printf("and my age is %i\n", p->age);
+  printf("\n");
+}
+
+void commentAboutAge(PersonPtr p)
+{
+  if (p->age < 5)
+  {
+    printf("baby");
+  }
+  if (p->age == 5)
+  {
+    printf("time to start school\n");
+  }
+}
+
+PersonPtr make_person(String theName, int theAge)
+{  
+  PersonPtr p = (PersonPtr)malloc(sizeof(struct Person));
+  p->name = theName;
+  p->age = theAge;
+  return p;
+}
+
+int main()
+{
+  PersonPtr ls,wp;
+  ls = make_person("Luke Skywalker",34);
+  wp = make_person(Winston Peters", 48);
+  
+  talk(ls);
+  talk(wp);
+  
+  return 0;
+}
