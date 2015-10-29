@@ -18,7 +18,7 @@ b
 Person.c
 
 #include <stdio.h>
-#inlcude "Person.h"
+#include "Person.h"
 
 void talk(PersonPtr p)
 {
@@ -50,8 +50,8 @@ PersonPtr make_person(String theName, int theAge)
 int main()
 {
   PersonPtr ls,wp;
-  ls = make_person("Luke Skywalker",34);
-  wp = make_person(Winston Peters", 48);
+  ls = make_person("Luke Skywalker", 34);
+  wp = make_person("Winston Peters", 48);
   
   talk(ls);
   talk(wp);
