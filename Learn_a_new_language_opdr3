@@ -1,0 +1,76 @@
+CitizenTest.java
+
+class Citizen {
+
+   // Properties of the class...
+   private String name;
+   private int    salary;
+   private int    savings;
+   private int    loan;
+
+   // Constructor of the class...
+   public Citizen(String aName, int aSalary, int aSavings, int aLoan) {
+      name    = aName;
+      salary  = aSalary;
+      savings = aSavings;
+      loan    = aLoan;
+   }
+
+   // Methods of the class...
+   public int getSalary() {
+      return salary;
+   }
+   public void setSalary(int aSalary) {
+      salary = aSalary;
+   }
+   
+   // vraag 2
+   public void salaryRise(int amount)
+   {
+      salary = salary + amount;
+   }
+   
+   // vraag 3
+   public int netWorth()
+   {
+      netw = savings - loan;
+      return netw;
+   }
+
+    // vraag 6
+    public Citizen(String theName)
+    {
+      name = theName;
+      salary = 0;
+      savings = 0;
+      loan = 0;
+    }
+
+    // vraag 5
+    public String toString()
+    {
+      return  "name = " + name + ", salary = " + salary + ", savings = " + savings + ", loan = " + loan;
+    }
+}
+
+class CitizenTest {
+    
+   // The main method is the point of entry into the program...
+   public static void main(String[] args) {
+
+      Citizen e = new Citizen("Ernie", 50000, 2000,   0);
+      Citizen b = new Citizen("Bert", 100000,10000,5000);
+      // vraag 6
+      Citizen f = new Citizen("Fred");
+      
+      // vraag 2
+      e.salaryRise(10000);
+
+      System.out.println("Ernie's salary is: " + e.getSalary());
+      // vraag 3
+      System.out.println("Ernie's net worth is: " + e.netWorth());
+   }
+}
+
+// vraag 4
+omdat je de return waardes in java mag negeren
