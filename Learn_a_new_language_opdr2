@@ -1,1 +1,41 @@
 PersonTest.java
+
+2
+a
+private int shoe_size;
+
+b 
+public Person(String theName, int theAge, int theShoe_size)
+{
+    name = theName;
+    age = theAge;
+    shoe_size = theShoe_size;
+}
+
+c
+Person ls = new Person("Luke Skywalker", 34, 48);
+Person wp = new Person("Winston Peters", 48, 44);
+
+d
+...
+System.out.println("Hi..."); 
+System.out.println("and...");
+System.out.println("and my shoe size is " + shoe_size);
+System.out.println();
+...
+
+3
+if (age > 60)
+{
+  System.out.println("old person");
+}
+
+4
+
+
+
+
+
+
+
+
