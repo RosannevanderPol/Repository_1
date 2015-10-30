@@ -32,6 +32,12 @@ class Dog {
       name     = aName;
       age      = anAge;
       dogsFlea = aFlea;
+      
+    // vraag 4
+    public String toString()
+    {
+      return "I am a dog called " + name + "and my age is " + age + "and I have a flea called " + dogsFlea.name;
+    }
    }
 
 }
@@ -48,7 +54,10 @@ class DogTest {
     Dog r = new Dog("Rex", 3, p);
     Dog j = new Dog("Jimbo", 4, s);
     Dog f = new Dog("Fido", 5, z);
-
+    
+    System.out.println(r.toString());
+    System.out.println(j.toString());
+    System.out.println(f.toString());
    }
 }
 
